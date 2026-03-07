@@ -1,0 +1,42 @@
+/* assets/css/style.css */
+
+/* 1. XÓA BỎ DẤU VẾT CỦA STREAMLIT (Tạo cảm giác App thật) */
+[data-testid="stToolbar"] {visibility: hidden !important;} /* Ẩn menu 3 chấm góc phải */
+header {visibility: hidden !important;} /* Ẩn thanh header mặc định */
+footer {visibility: hidden !important;} /* Ẩn chữ "Made with Streamlit" dưới cùng */
+
+/* 2. HIỆU ỨNG TƯƠNG TÁC CHO NÚT BẤM (Nổi bật & Mềm mại) */
+button {
+    border-radius: 25px !important; /* Bo góc tròn xoe dễ thương */
+    box-shadow: 0 4px 6px rgba(216, 27, 96, 0.15) !important; /* Đổ bóng nhẹ */
+    transition: all 0.3s ease !important; /* Hiệu ứng chuyển động mượt */
+}
+
+button:hover {
+    transform: translateY(-3px); /* Nhô lên một chút khi di chuột vào */
+    box-shadow: 0 8px 15px rgba(216, 27, 96, 0.25) !important;
+}
+
+/* 3. LÀM ĐẸP Ô NHẬP MÃ BÍ MẬT */
+input {
+    border-radius: 15px !important;
+    border: 2px solid #FFE4E8 !important;
+    text-align: center !important; /* Căn giữa chữ khi nhập mã */
+    font-weight: bold !important;
+}
+
+input:focus {
+    border-color: #FF7A9A !important;
+    box-shadow: 0 0 8px rgba(255, 122, 154, 0.4) !important;
+}
+
+/* 4. HIỆU ỨNG TRÔI NỔI CHO CHIẾC HỘP QUÀ (Tạo cảm giác 3D sống động) */
+[data-testid="stImage"] img {
+    animation: floatbox 3.5s ease-in-out infinite;
+}
+
+@keyframes floatbox {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); } /* Nổi lên trên 12px */
+    100% { transform: translateY(0px); }
+}
