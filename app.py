@@ -93,7 +93,7 @@ if st.session_state.stage == 0:
     st.markdown("<h3 style='text-align: center;'>Nhập mã bí mật để bắt đầu:</h3>", unsafe_allow_html=True)
     secret_code = st.text_input("Mã của bạn:", type="password", help="Hỏi người gửi nếu bạn không biết mã nhé!")
     
-    if st.button("Mở khóa trò chơi 🚀", use_container_width=True):
+    if st.button("Mở khóa 🚀", use_container_width=True):
         messages = load_messages()
         code_lower = secret_code.strip().lower()
         
@@ -113,8 +113,8 @@ if st.session_state.stage == 0:
 # MÀN 1: THỬ THÁCH SỐ 8
 # ==========================================
 elif st.session_state.stage == 1:
-    st.subheader(f"👋 Chào {st.session_state.user_name}!")
-    st.write("**Thử thách 1:** Kéo thanh trượt đến con số đại diện cho ngày Quốc tế Phụ nữ.")
+    st.subheader(f"👋 Chào bạn!")
+    st.write("**Thử thách 1:** Từ 1 đến 10, bạn hãy nghĩ xem con số nào là biểu tượng của ngày quốc tế phụ nữ?")
     
     slider_val = st.slider("Chọn một con số:", min_value=1, max_value=10, value=1)
     
@@ -154,7 +154,7 @@ elif st.session_state.stage == 2:
 # MÀN 3: TRUYỀN NĂNG LƯỢNG MỞ HỘP
 # ==========================================
 elif st.session_state.stage == 3:
-    st.write("**Thử thách cuối cùng:** Chiếc hộp cần năng lượng để tự mở nắp. Hãy nhấn nút dưới đây đủ 3 lần!")
+    st.write("**Thử thách cuối cùng:** Chiếc hộp cần một chút tình yêu để tự mở nắp. Hãy nhấn nút dưới đây đủ 3 lần!")
     
     # Hiển thị thanh tiến trình năng lượng
     progress = st.progress(st.session_state.energy * 33)
