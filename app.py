@@ -194,7 +194,7 @@ elif st.session_state.stage == 4:
         </p>
         <hr style="border-top: 1px dashed #FF7A9A; margin: 20px 0;">
         <p style="color: #FF7A9A; font-style: italic; font-size: 14px;">
-            Món quà công nghệ được code riêng tặng cậu! ❤️
+            Món quà công nghệ được code riêng tặng bạn ! ❤️
         </p>
     </div>
     """
