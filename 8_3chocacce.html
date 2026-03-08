@@ -30,11 +30,11 @@ canvas {
 <script>
 var settings = {
   particles: {
-    length:   7000, // maximum amount of particles
+    length:   10000, // maximum amount of particles
     duration:   2, // particle duration in sec
-    velocity: 120, // particle velocity in pixels/sec
-    effect: -0.6, // play with this for a nice effect
-    size:      8, // particle size in pixels
+    velocity: 80, // particle velocity in pixels/sec
+    effect: -0.8, // play with this for a nice effect
+    size:      6, // particle size in pixels
   },
 };
 /*
@@ -176,6 +176,7 @@ var ParticlePool = (function() {
  
   // get point on heart with -PI <= t <= PI
   function pointOnHeart(t) {
+    var scale = Math.min(canvas.width, canvas.height) / 35; // tự co theo màn hình
     return new Point(
       160 * Math.pow(Math.sin(t), 3),
       130 * Math.cos(t) - 50 * Math.cos(2 * t) - 20 * Math.cos(3 * t) - 10 * Math.cos(4 * t) + 25
