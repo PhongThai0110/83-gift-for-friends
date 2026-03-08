@@ -253,7 +253,7 @@ elif st.session_state.stage == 4:
 
 <script>
     /* Logic JS được đọc trực tiếp từ file của bạn */
-    {open('8_3chocacce.html', 'r', encoding='utf-8').read().split('<script>')[1].split('</script>')[0]}
+    {open('8_3chocaccee.html', 'r', encoding='utf-8').read().split('<script>')[1].split('</script>')[0]}
 </script>
 """
     
